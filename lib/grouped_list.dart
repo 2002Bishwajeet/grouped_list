@@ -422,7 +422,7 @@ class _GroupedListViewState<T, E> extends State<GroupedListView<T, E>> {
   /// The elements inside a group are sorted accoring to [widget.itemComparator]
   /// or their natural order.
   List<T> _sortElements() {
-    var elements = [...widget.elements];
+    List<T> elements = List.of(widget.elements);
     if (widget.sort && elements.isNotEmpty) {
       elements.sort((e1, e2) {
         int? compareResult;
